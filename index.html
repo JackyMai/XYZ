@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Import Google Icon Font -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- Import Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600|Roboto:400,700,500' rel='stylesheet' type='text/css'/>
+    <!-- Import Bootstrap files -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- Import materialize.css -->
+    <link href="css/materialize.min.css" rel="stylesheet" type="text/css"/>
+    <!-- Import custom css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/notifications.css"/>
+    <link rel="stylesheet" type="text/css" href="css/circle.css"/>
+    <title>XYZ Beta</title>
+</head>
+
+<body>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <!-- Navbar section -->
+    <div class="navbar-fixed hoverable">
+        <nav class="navbar">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">XYZ</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <!-- Schedule button -->
+                    <li class="tooltipped" data-position="bottom" data-delay="25" data-tooltip="Schedule (N/A)">
+                        <a class="waves-effect waves-light"><i class="material-icons">query_builder</i></a>
+                    </li>
+                    <!-- Notifications button -->
+                    <li>
+                        <a class="dropdown-button waves-effect waves-light" data-activates="notifications" data-constrainwidth="false"><i class="material-icons left">notifications</i><span class="new badge">4</span></a>
+                        <ul id="notifications" class="dropdown-content">
+                            <div class="notification-heading">
+                                <p class="menu-title left">Notifications</p>
+                            </div>
+                            <li class="divider"></li>
+                            <div class="notifications-wrapper">
+                                <li class="notification-item">
+                                    <p class="item-title">15:26 Front door</p>
+                                    <p class="item-info">Open attempt</p>
+                                </li>
+                                <li class="notification-item">
+                                    <p class="item-title">13:10 Back door camera</p>
+                                    <p class="item-info">Movement detected</p>
+                                </li>
+                                <li class="notification-item">
+                                    <p class="item-title">12:24 Front door camera</p>
+                                    <p class="item-info">Movement detected</p>
+                                </li>
+                                <li class="notification-item">
+                                    <p class="item-title">12:22 Sliding door</p>
+                                    <p class="item-info">Open attempt</p>
+                                </li>
+                            </div>
+                        </ul>
+                    </li>
+                    <!-- Account button -->
+                    <li class="tooltipped" data-position="bottom" data-delay="25" data-tooltip="Account (N/A)">
+                        <a class="waves-effect waves-light"><i class="material-icons">account_circle</i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Top Panel section -->
+    <div id="top-panel" class="row">
+        <!-- Left Panel section -->
+        <div id="left-panel" class="col s3 hoverable">
+            <ul class="nav nav-pills nav-stacked">
+                <li class="left-panel-li active"><a href="#overview" class="waves-effect waves-light hoverable" data-toggle="pill">
+                        <img src="icon/Home-64.png" class="left-panel-icons"/>Overview
+                </a></li>
+                <li class="left-panel-li"><a class="waves-effect waves-light hoverable tooltipped" data-position="right" data-delay="50" data-tooltip="N/A">
+                        <img src="icon/Temperature-64.png" class="left-panel-icons"/>Climate Control
+                </a></li>
+                <li class="left-panel-li"><a class="waves-effect waves-light hoverable tooltipped" data-position="right" data-delay="50" data-tooltip="N/A">
+                        <img src="icon/Light On-64.png" class="left-panel-icons"/>Lighting
+                </a></li>
+                <li class="left-panel-li"><a class="waves-effect waves-light hoverable tooltipped" data-position="right" data-delay="50" data-tooltip="N/A">
+                    <img src="icon/General Blind-64.png" class="left-panel-icons"/>Blinds
+                </a></li>
+                <li class="left-panel-li"><a href="#doors" class="waves-effect waves-light hoverable" data-toggle="pill">
+                    <img src="icon/Door-64.png" class="left-panel-icons"/>Doors
+                </a></li>
+                <li class="left-panel-li"><a class="waves-effect waves-light hoverable tooltipped" data-position="right" data-delay="50" data-tooltip="N/A">
+                    <img src="icon/Closed Window-64.png" class="left-panel-icons"/>Windows
+                </a></li>
+                <li><a href="#cameras" class="waves-effect waves-light hoverable" data-toggle="pill">
+                    <img src="icon/Wall Mount Camera-64.png" class="left-panel-icons"/>Cameras
+                </a></li>
+            </ul>
+        </div>
+        <!-- Right Panel section -->
+        <div id="right-panel" class="col s9 tab-content">
+            <!-- Overview panel -->
+            <div id="overview" class="tab-pane fade in active">
+                <!-- Energy panel -->
+                <div id="energy-panel" class="panel panel-default hoverable">
+                    <div class="panel-heading"><h1>Energy</h1></div>
+                    <div class="panel-body">
+                        <!-- Climate Control panel -->
+                        <div id="overview-cc-panel" class="panel panel-default overview-subpanel hoverable hoverable left">
+                            <div class="panel-body">
+                                <h3 class="left">Climate Control</h3>
+                                <div class="switch right">
+                                    <label>
+                                        <input type="checkbox">
+                                        <span class="lever textless-lever"></span>
+                                    </label>
+                                </div>
+                                <div class="clear"></div>
+                                <p align="center" style="font-size: 72px;"/>21&#176;C</p>
+                                <div>
+                                    <p class="left">Target:</p>
+                                    <p class="label label-info right">23&#176;C</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div>
+                                    <p class="left">Humidity:</p>
+                                    <p class="label label-info right">52%</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div>
+                                    <p class="left">Mode:</p>
+                                    <p class="label label-info right">AWAY</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div>
+                                    <p class="left">Energy Saved:</p>
+                                    <p class="label label-info right">5 kW</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Efficiency Rating panel -->
+                        <div id="overview-efficiency-panel" class="panel panel-default overview-subpanel hoverable right" style="width: 272px;">
+                            <div class="panel-body">
+                                <h3>Efficiency Rating</h3>
+                                <div class="c100 p50 big green">
+                                    <span>62%</span>
+                                    <div class="slice">
+                                        <div class="bar"></div>
+                                        <div class="fill"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <!-- Lighting panel -->
+                        <div id="overview-lighting-panel" class="panel panel-default overview-subpanel hoverable left">
+                            <div class="panel-body">
+                                <h3>Lighting</h3>
+                                <div>
+                                    <p class="left">Active Lights:</p>
+                                    <p class="label label-info right">4</p>
+                                </div>
+                                <div class="clear"></div>
+                                <div>
+                                    <p class="left">Energy Saved:</p>
+                                    <p class="label label-info right">2 kW</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Blinds panel -->
+                        <div id="overview-blinds-panel" class="panel panel-default overview-subpanel hoverable right">
+                            <div class="panel-body">
+                                <h3>Blinds</h3>
+                                <p class="left">Opened Blinds:</p>
+                                <span class="label label-info right">6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Security panel -->
+                <div id="security-panel" class="panel panel-default hoverable">
+                    <div class="panel-heading"><h1>Security</h1></div>
+                    <div class="panel-body">
+                        <!-- Doors panel -->
+                        <div id="overview-doors-panel" class="panel panel-default overview-subpanel hoverable left">
+                            <div class="panel-body">
+                                <h3>Doors</h3>
+                                <p class="left">Front Door:</p>
+                                <span class="label label-success right">LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Sliding Door:</p>
+                                <span class="label label-success right">LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Back Door (West):</p>
+                                <span class="label label-success right">LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Back Door (East):</p>
+                                <span class="label label-success right">LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Garage Door:</p>
+                                <span class="label label-success right">LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Inner Garage Door:</p>
+                                <span class="label label-danger right">UNLOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Alerts:</p>
+                                <span class="label label-warning right">2</span>
+                            </div>
+                        </div>
+                        <!-- Windows panel -->
+                        <div id="overview-windows-panel" class="panel panel-default overview-subpanel hoverable right">
+                            <div class="panel-body">
+                                <h3>Windows</h3>
+                                <p class="left">1st Floor:</p>
+                                <span class="label label-success right">ALL LOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">2nd Floor:</p>
+                                <span class="label label-danger right">3 UNLOCKED</span>
+                                <div class="clear"></div>
+                                <p class="left">Alerts:</p>
+                                <span class="label label-success right">0</span>
+                            </div>
+                        </div>
+                        <!-- Cameras panel -->
+                        <div id="overview-cameras-panel" class="panel panel-default overview-subpanel hoverable right">
+                            <div class="panel-body">
+                                <h3>Cameras</h3>
+                                <p class="left">Active Cameras:</p>
+                                <span class="label label-info right">4</span>
+                                <div class="clear"></div>
+                                <p class="left">Motion Alerts:</p>
+                                <span class="label label-warning right">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Doors panel -->
+            <div id="doors" class="tab-pane fade">
+                <div class="panel panel-default hoverable">
+                    <div class="panel-heading"><h1>Doors</h1></div>
+                    <div class="panel-body">
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                <p class="left">Front Door</p>
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                Sliding Door
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                Back Door (West)
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                Back Door (East)
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                Garage Door
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default doors-subpanel hoverable">
+                            <div class="panel-body">
+                                Inner Garage Door
+                                <div class="switch right">
+                                    <label>
+                                        UNLOCK
+                                        <input type="checkbox" checked="checked">
+                                        <span class="lever"></span>
+                                        LOCK
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Cameras panel -->
+            <div id="cameras" class="tab-pane fade">
+                <div class="panel panel-default hoverable">
+                    <div class="panel-heading"><h1>Cameras</h1></div>
+                    <div class="panel-body">
+                        <div class="card left hoverable">
+                            <div class="card-image">
+                                <img class="materialboxed" src="img/front-door-camera.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>Front Door Camera</h3>
+                                <p class="left">Status:</p><span class="label label-success right">ACTIVE</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="card right hoverable">
+                            <div class="card-image">
+                                <img class="materialboxed" src="img/garden-camera.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>Garden Camera</h3>
+                                <p class="left">Status:</p><span class="label label-success right">ACTIVE</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="card left hoverable">
+                            <div class="card-image">
+                                <img class="materialboxed" src="img/back-door-camera.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>Back Door (West) Camera</h3>
+                                <p class="left">Status:</p><span class="label label-success right">ACTIVE</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="card right hoverable">
+                            <div class="card-image">
+                                <img class="materialboxed" src="img/garage-door-camera.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>Garage Camera</h3>
+                                <p class="left">Status:</p><span class="label label-success right">ACTIVE</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

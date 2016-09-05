@@ -1,0 +1,143 @@
+body {
+    font-family: 'Open Sans', 'Roboto', 'Arial', sans-serif !important;
+    background-color: #fafbfc !important;
+}
+
+.panel-heading {
+    background-color: #ecf0f1 !important;
+}
+
+.clear {
+    clear: both;
+}
+
+span.lever.textless-lever {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+}
+
+span.lever {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+span.badge {
+    margin-left: 0px !important;
+}
+
+/* Right Panel Headings */
+h1 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px 5px 2px 2px;
+}
+
+/* Left Panel Headings */
+h2 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* Subpanel Headings*/
+h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Navbar */
+.navbar {
+    background-color: #e74c3c;
+    border-top: 0px;
+    /* Emerald: #2ecc71
+       Sun flower: #f1c40f
+       Orange: #f39c12
+       Alizarin: #e74c3c
+       Amethyst: #9b59b6
+       Lynch: #6C7A89
+       Asphalt: #34495e */
+}
+
+.nav-wrapper, .row {
+    width: 1000px;
+    margin: auto;
+}
+
+.brand-logo {
+    font-size: 50px !important;
+}
+
+.nav-icon {
+    height: 64px;
+}
+
+i.material-icons.left {
+    margin-right: 0px;
+}
+
+.hide-on-med-and-down a:hover, .hide-on-med-and-down a:focus {
+    color: white;
+}
+
+/* Top Panel */
+#top-panel {
+    padding-top: 30px;
+}
+
+/* Left Panel */
+.left-panel-icons {
+    height: 30px;
+}
+
+#left-panel {
+    padding-left: 0px;
+    padding-right: 0px;
+    border-radius: 10px;
+}
+
+.left-panel-li {
+    margin-bottom: 10px;
+}
+
+#left-panel img {
+    margin-right: 20px;
+}
+
+#left-panel a {
+    font-size: 16px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li.active>a:hover {
+    background-color: #ecf0f1;
+    color: #e74c3c !important;
+}
+
+/* Right Panel */
+#right-panel {
+    padding-left: 40px;
+    padding-right: 0px;
+}
+
+.overview-subpanel {
+    width: 250px;
+}
+
+#energy-panel > .panel-body, #security-panel > .panel-body {
+    padding-left: 70px;
+    padding-right: 70px;
+}
+
+#doors .panel-body, #cameras .panel-body {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.card {
+    width: 320px;
+}
